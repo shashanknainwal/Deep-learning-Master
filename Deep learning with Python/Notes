@@ -1,1 +1,45 @@
 
+# Keras code flow
+
+.........................................
+MODEL ARCHITECTURE
+
+## from keras import modules, layers
+## model= models.Sequential()
+### model.add(layers.Dense(512, activation='relu'),input_shape=(28*28,))
+### model.add(layers.Dense(10,activation='softmax'))
+
+
+.........................
+MODEL COMPILATION- loss function, optimizer, metrics
+
+model.compile(optimizer='rmsprop',loss='categorical_cross_entropy',metrics=['accuracy'])
+
+.........................
+DATA PREPROCESSING
+
+Original image- (60000,28,28)
+Desired image-(600000,28*28) and float 32 and size btwn [0,1]
+
+train_image= train_image.reshape((60000,28*28))
+train_image= train_image.astype('float32')/255
+
+repeat the above step for test dataset
+
+from keras.utils import to_categorical
+
+train_label= to_categorical(train_label)
+repet for test label
+
+................................
+
+TRAINING
+model.fit(train_image, train_label, n_epochs=5, batch_size=100)
+
+..............
+
+EVALUATE
+
+model.evaluate(test_image, test_label)
+
+
