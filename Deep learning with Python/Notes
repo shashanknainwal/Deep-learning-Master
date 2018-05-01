@@ -34,7 +34,7 @@ repet for test label
 ................................
 
 TRAINING
-model.fit(train_image, train_label, n_epochs=5, batch_size=100)
+model.fit(train_image, train_label, epochs=5, batch_size=100)
 
 ..............
 
