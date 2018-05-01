@@ -4,7 +4,7 @@
 .........................................
 MODEL ARCHITECTURE
 
-## from keras import modules, layers
+## from keras import models, layers
 ## model= models.Sequential()
 ### model.add(layers.Dense(512, activation='relu'),input_shape=(28*28,))
 ### model.add(layers.Dense(10,activation='softmax'))
