@@ -20,6 +20,24 @@ MODEL ARCHITECTURE
 ### model.add(layers.Dense(512, activation='relu'),input_shape=(28*28,))
 ### model.add(layers.Dense(10,activation='softmax'))
 
+Alternative theory- to prevent overfitting, us L2 regularization- Multiple all weights by a factor so that distribution of weights is normal
+
+from keras import regularizers
+
+## from keras import models, layers
+## model= models.Sequential()
+### model.add(layers.Dense(512,kernel_regularizer.l2(.001), activation='relu'),input_shape=(28*28,))
+add it again if needed
+### model.add(layers.Dense(10,activation='softmax'))
+
+
+Dropout is also used to prevent overfitting
+
+## from keras import models, layers
+## model= models.Sequential()
+### model.add(layers.Dense(512, activation='relu'),input_shape=(28*28,))
+mode.add(layers.Dropout(0.5))
+### model.add(layers.Dense(10,activation='softmax'))
 
 .........................
 MODEL COMPILATION- loss function, optimizer, metrics
