@@ -1,6 +1,17 @@
 
 # Keras code flow
 
+### Steps
+Proprocess
+
+1. Model definition
+2. Model compilation
+3. Keep validation step
+4. plot loss
+5. plot accuracy
+6. Retrain the network
+7. Evaluate
+
 .........................................
 MODEL ARCHITECTURE
 
